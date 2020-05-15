@@ -1,4 +1,5 @@
 # TF2panelbot
+![](https://i.imgur.com/Rj5wtUU.png)
 a bot that lights up 3 random panels from Meet the Spy  
 original idea by Douglas Joseph
 
