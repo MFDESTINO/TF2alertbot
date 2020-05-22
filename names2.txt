@@ -1,0 +1,72 @@
+red 2
+on cap 4
+lost memory 5
+above you! 8
+is fired 6
+opened briefcase 7
+blu 2
+updated 1
+needs a ride 7
+depressed 1
+sleeping 1
+is drunk 6
+demoman 3
+emergency 8
+new mission 0
+on break 4
+hungry 1
+sabotage 8
+engineer 3
+delivered 1
+drowned 1
+behind you! 8
+exploded 1
+on fire 4
+heavy 3
+look out 0
+arrived 1
+found dracula 7
+wounded 1
+sentry 3
+medic 3
+stole car 7
+all clear 8
+lost briefcase 7
+hats 3
+broken 1
+pyro 3
+hit by train 4
+vaporized 1
+mangled 1
+is a man 6
+has a briefcase 7
+scout 3
+smells 7
+in surgery 4
+intelligence 3
+is a woman 6
+owns base 7
+sniper 3
+has evil twin 7
+outside base 8
+lost dracula 7
+on toilet 4
+needs backup 7
+soldier 3
+needs roommate 7
+backstabbed 1
+about to explode 4
+pushing cart 3
+sandvich 3
+spy 3
+has been 0
+again 7
+jarate 7
+captured 1
+exploding 7
+team 3
+electrocuted 1
+is a robot 4
+needs ammo 7
+smothered 1
+defenestrated 1

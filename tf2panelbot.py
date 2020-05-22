@@ -45,9 +45,27 @@ def make_panel_image(output_fname, recipe):
 
     output.save(output_fname)
 
+def make_description(namefile, recipe):
+    with open (namefile, "r") as f:
+        names_raw = f.readlines()
+
+    names_dict = {}
+    names = []
+    for n in names_raw:
+        name_number = n[-2]
+        name = n[:-3]
+        names.append(name)
+        names_dict[name] = name_number
+    description = {}
+    for i in recipe:
+        description[names[i]] = names_dict[names[i]]
+    d = {k: v for k, v in sorted(description.items(), key=lambda item: item[1])}
+    return " ".join(list(d.keys()))
 
 if __name__ == "__main__":
-    os.chdir(os.path.dirname(sys.argv[0]))
-    recipe = get_recipe("recipes.json")
-    print(recipe)
-    make_panel_image("output.png", recipe)
+    #os.chdir(os.path.dirname(sys.argv[0]))
+    #generate_recipe_file("recipes.json")
+    recipe = [9, 23, 69]
+    #print(recipe)
+    make_panel_image("output2.png", recipe)
+    print(make_description('names2.txt', recipe).upper())
