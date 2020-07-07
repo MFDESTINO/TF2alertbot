@@ -7,7 +7,7 @@ from random import choice
 import os
 import sys
 import json
-
+from autopost import AutoPostBot
 
 def generate_recipe_file(recipe_file, num_panels=72):
     from itertools import combinations
@@ -62,10 +62,22 @@ def make_description(namefile, recipe):
     d = {k: v for k, v in sorted(description.items(), key=lambda item: item[1])}
     return " ".join(list(d.keys()))
 
+def post_alert():
+    from datetime import datetime
+    now = datetime.now()
+    timestamp = now.strftime("%y-%m-%d-%H-%M")
+    os.chdir(os.path.dirname(sys.argv[0]))
+    print(timestamp)
+    recipe = get_recipe('recipes.json')
+    print(recipe)
+    description = make_description('names2.txt', recipe).upper()
+    make_panel_image('output.png', recipe)
+    postbot = AutoPostBot('https://mbasic.facebook.com/TF2alertbot/')
+    postbot.post_image('/home/friend/TF2alertbot/output.png', [description])
+
+import multiprocessing as mp
+
 if __name__ == "__main__":
-    #os.chdir(os.path.dirname(sys.argv[0]))
-    #generate_recipe_file("recipes.json")
-    recipe = [9, 23, 69]
-    #print(recipe)
-    make_panel_image("output2.png", recipe)
-    print(make_description('names2.txt', recipe).upper())
+    p = mp.Process(target=post_alert)
+    p.start()
+    p.join()
